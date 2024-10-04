@@ -23,7 +23,7 @@ const CategoryProducts = () => {
       try {
         // Fetch Category Details
         const categoryResponse = await fetch(
-          `http://localhost:5000/api/categories/${id}`
+          `https://tarun-marrige-booking.onrender.com/api/categories/${id}`
         );
         if (!categoryResponse.ok) {
           throw new Error("Failed to fetch category details");
@@ -33,7 +33,7 @@ const CategoryProducts = () => {
 
         // Fetch Products for the Category
         const productsResponse = await fetch(
-          `http://localhost:5000/api/products/${id}/products`
+          `https://tarun-marrige-booking.onrender.com/api/products/${id}/products`
         );
         if (!productsResponse.ok) {
           throw new Error("Failed to fetch products");

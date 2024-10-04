@@ -26,7 +26,7 @@ const VideoUpload = () => {
     formData.append('video', videoFile);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/video', formData, {
+      const response = await axios.post('https://tarun-marrige-booking.onrender.com/api/video', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -55,7 +55,7 @@ const VideoUpload = () => {
     formData.append('video', videoFile);
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/video/${videoId}`, formData, {
+      const response = await axios.put(`https://tarun-marrige-booking.onrender.com/api/video/${videoId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

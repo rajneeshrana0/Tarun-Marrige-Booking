@@ -26,7 +26,7 @@ const CreateCategoryProduct = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/categories');
+      const response = await axios.get('https://tarun-marrige-booking.onrender.com/api/categories');
       setCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -36,7 +36,7 @@ const CreateCategoryProduct = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/products/products');
+      const response = await axios.get('https://tarun-marrige-booking.onrender.com/api/products/products');
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -73,7 +73,7 @@ const CreateCategoryProduct = () => {
     });
 
     try {
-      await axios.post(`http://localhost:5000/api/products/${category._id}/products`, formData, {
+      await axios.post(`https://tarun-marrige-booking.onrender.com/api/products/${category._id}/products`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -120,7 +120,7 @@ const CreateCategoryProduct = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/products/products/${id}`);
+        await axios.delete(`https://tarun-marrige-booking.onrender.com/api/products/products/${id}`);
         toast.success('Product deleted successfully!');
         fetchProducts();
       } catch (error) {

@@ -16,7 +16,7 @@ const ProductInfo = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const productResponse = await fetch(`http://localhost:5000/api/products/${id}/products/${id}`);
+        const productResponse = await fetch(`https://tarun-marrige-booking.onrender.com/api/products/${id}/products/${id}`);
         if (productResponse.ok) {
           const productData = await productResponse.json();
           setProduct(productData);
@@ -27,7 +27,7 @@ const ProductInfo = () => {
             fetchMoreProductsByCategory(productData.category); // Fetch more products from the same category
           }
         } else {
-          const collectionProductResponse = await fetch(`http://localhost:5000/api/collection-products/${collectionId}/products/${id}`);
+          const collectionProductResponse = await fetch(`https://tarun-marrige-booking.onrender.com/api/collection-products/${collectionId}/products/${id}`);
           if (collectionProductResponse.ok) {
             const collectionProductData = await collectionProductResponse.json();
             setProduct(collectionProductData);
@@ -48,7 +48,7 @@ const ProductInfo = () => {
 
     const fetchCategoryName = async (categoryId) => {
       try {
-        const categoryResponse = await fetch(`http://localhost:5000/api/categories/${categoryId}`);
+        const categoryResponse = await fetch(`https://tarun-marrige-booking.onrender.com/api/categories/${categoryId}`);
         if (categoryResponse.ok) {
           const categoryData = await categoryResponse.json();
           setCategoryName(categoryData.name);
@@ -62,7 +62,7 @@ const ProductInfo = () => {
 
     const fetchCollectionName = async (collectionId) => {
       try {
-        const collectionResponse = await fetch(`http://localhost:5000/api/collections/${collectionId}`);
+        const collectionResponse = await fetch(`https://tarun-marrige-booking.onrender.com/api/collections/${collectionId}`);
         if (collectionResponse.ok) {
           const collectionData = await collectionResponse.json();
           setCollectionName(collectionData.name);
@@ -77,7 +77,7 @@ const ProductInfo = () => {
     // Fetch more products from the same category
     const fetchMoreProductsByCategory = async (categoryId) => {
       try {
-        const response = await fetch(`http://localhost:5000/api/categories/${categoryId}/products`);
+        const response = await fetch(`https://tarun-marrige-booking.onrender.com/api/categories/${categoryId}/products`);
         if (response.ok) {
           const data = await response.json();
           setMoreProducts(data.products);
@@ -90,7 +90,7 @@ const ProductInfo = () => {
     // Fetch more products from the same collection
     const fetchMoreProductsByCollection = async (collectionId) => {
       try {
-        const response = await fetch(`http://localhost:5000/api/collections/${collectionId}/products`);
+        const response = await fetch(`https://tarun-marrige-booking.onrender.com/api/collections/${collectionId}/products`);
         if (response.ok) {
           const data = await response.json();
           setMoreProducts(data.products);

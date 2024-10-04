@@ -18,7 +18,7 @@ const Discover = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/categories');
+        const response = await axios.get('https://tarun-marrige-booking.onrender.com/api/categories');
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -58,7 +58,7 @@ const Discover = () => {
                   {category.name.toUpperCase()}
                 </h2>
                 <button className="mt-4 text-white border-b-2 border-white font-gara">
-                 Book Now
+                  Book Now
                 </button>
               </div>
             </div>

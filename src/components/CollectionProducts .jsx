@@ -17,7 +17,7 @@ const CollectionProducts = () => {
       try {
         // Fetch Collection Details
         const collectionResponse = await fetch(
-          `http://localhost:5000/api/collections/${id}`
+          `https://tarun-marrige-booking.onrender.com/api/collections/${id}`
         );
         if (!collectionResponse.ok) {
           throw new Error("Failed to fetch collection details");
@@ -27,7 +27,7 @@ const CollectionProducts = () => {
 
         // Fetch Products for the Collection
         const productsResponse = await fetch(
-          `http://localhost:5000/api/collection-products/${id}/products`
+          `https://tarun-marrige-booking.onrender.com/api/collection-products/${id}/products`
         );
         if (!productsResponse.ok) {
           throw new Error("Failed to fetch products");

@@ -9,7 +9,7 @@ const VideoHome = () => {
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/video');
+        const response = await axios.get('https://tarun-marrige-booking.onrender.com/api/video');
         if (response.data && response.data.length > 0) {
           setVideoUrl(response.data[0].videoUrl); // Assuming the first video is used
         }

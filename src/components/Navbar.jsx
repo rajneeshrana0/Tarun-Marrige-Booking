@@ -54,7 +54,7 @@ const Navbar = () => {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/categories"
+          "https://tarun-marrige-booking.onrender.com/api/categories"
         );
         const data = await response.json();
         setCategories(data);
@@ -66,7 +66,7 @@ const Navbar = () => {
     const fetchCollections = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/collections"
+          "https://tarun-marrige-booking.onrender.com/api/collections"
         );
         const data = await response.json();
         setCollections(data);
@@ -338,27 +338,27 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-  <Link
-    to="/cart"
-    className="hover:border-b-2 hover:border-black font-corm flex items-center"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      className="w-5 h-5 mr-1"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M3 3h2l.4 2M7 13h10l1.4-6H6.6M7 13l1 5h8l1-5M5 6h14l-1.4 6H7.6L5 6z"
-      />
-    </svg>
-    Cart
-  </Link>
-</li>
+                  <Link
+                    to="/cart"
+                    className="hover:border-b-2 hover:border-black font-corm flex items-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="w-5 h-5 mr-1"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 3h2l.4 2M7 13h10l1.4-6H6.6M7 13l1 5h8l1-5M5 6h14l-1.4 6H7.6L5 6z"
+                      />
+                    </svg>
+                    Cart
+                  </Link>
+                </li>
 
               </ul>
             </div>

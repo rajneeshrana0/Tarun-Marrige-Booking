@@ -16,7 +16,7 @@ const CreateCategory = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/categories');
+      const response = await axios.get('https://tarun-marrige-booking.onrender.com/api/categories');
       setCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -30,7 +30,7 @@ const CreateCategory = () => {
     if (editMode) {
       // Update category
       try {
-        await axios.put(`http://localhost:5000/api/categories/${categoryId}`, { name });
+        await axios.put(`https://tarun-marrige-booking.onrender.com/api/categories/${categoryId}`, { name });
         toast.success('Category updated successfully!');
         setEditMode(false);
         setCategoryId(null);
@@ -41,7 +41,7 @@ const CreateCategory = () => {
     } else {
       // Create category
       try {
-        await axios.post('http://localhost:5000/api/categories', { name });
+        await axios.post('https://tarun-marrige-booking.onrender.com/api/categories', { name });
         toast.success('Category created successfully!');
       } catch (error) {
         console.error('Error creating category:', error);
@@ -62,7 +62,7 @@ const CreateCategory = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this category?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/categories/${id}`);
+        await axios.delete(`https://tarun-marrige-booking.onrender.com/api/categories/${id}`);
         toast.success('Category deleted successfully!');
         fetchCategories(); // Refresh the list after deleting
       } catch (error) {

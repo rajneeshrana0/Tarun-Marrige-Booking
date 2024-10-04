@@ -5,7 +5,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await fetch('http://localhost:5000/api/orders');
+      const response = await fetch('https://tarun-marrige-booking.onrender.com/api/orders');
       const data = await response.json();
       console.log(data);
       setOrders(data);

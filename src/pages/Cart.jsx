@@ -102,7 +102,7 @@ const Cart = () => {
 
     try {
       // Step 1: Create an order for payment on the backend
-      const paymentResponse = await fetch("http://localhost:5000/api/payments", {
+      const paymentResponse = await fetch("https://tarun-marrige-booking.onrender.com/api/payments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -137,7 +137,7 @@ const Cart = () => {
 
             try {
               const verifyResponse = await fetch(
-                "http://localhost:5000/api/payments/verify",
+                "https://tarun-marrige-booking.onrender.com/api/payments/verify",
                 {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
@@ -156,7 +156,7 @@ const Cart = () => {
                   userDetails: userDetails,  // Include user details in the request
                 });
 
-                const orderResponse = await fetch("http://localhost:5000/api/orders", {
+                const orderResponse = await fetch("https://tarun-marrige-booking.onrender.com/api/orders", {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({
@@ -216,7 +216,7 @@ const Cart = () => {
         />
         <p className="text-xl font-semibold">Your cart is empty</p>
         <Link to="/" className="text-blue-500 underline hover:text-blue-700">
-          Shop 
+          Shop
         </Link>
       </div>
     );
